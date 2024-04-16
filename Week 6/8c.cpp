@@ -5,12 +5,24 @@ using namespace std;
 
 const int N = 1e5 + 2;
 
-int Round (double x) {
-    
+int Round1 (double x) {
+    int a = (int) x;
+    double _x = a;
+    if (x - _x < 0.5f) return x;
+    return x + 1;
+}
+
+int Round2 (double x) {
+    int a = ceil(x);
+    int b = floor(x);
+    if (x - b < 0.5) return b;
+    return a;
 }
 
 void Solve () {
-
+    int n;
+    cin >> n;
+    cout << Round1(n) << ' ' << Round2(n);
 }
 
 int main () {

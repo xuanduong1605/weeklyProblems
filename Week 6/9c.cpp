@@ -5,8 +5,14 @@ using namespace std;
 
 const int N = 1e5 + 2;
 
-void Solve () {
+int randomInt (int n) {
+    return rand() % n;
+}
 
+void Solve () {
+    int n;
+    cin >> n;
+    cout << randomInt(n);
 }
 
 int main () {
